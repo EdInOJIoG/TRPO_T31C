@@ -1,0 +1,3 @@
+13 Mountain 1500
+12 Lake 1200
+28 Beacon 2000
