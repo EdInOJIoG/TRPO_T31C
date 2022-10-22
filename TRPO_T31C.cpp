@@ -121,10 +121,19 @@ void change()
 void save()
 {
     ofstream write("finish.txt", ios_base::trunc);
-    for (int i = 0; i < tur.size(); i++)
+
+    cout << setiosflags(ios::left);
+    cout << "   Count   " << "Place   " << "  Cost" << endl;
+
+	for (int i = 0; i < tur.size(); i++)
     {
-        write << tur[i].count << "\t" << tur[i].place << "\t" << tur[i].cost << endl;
+        cout << i + 1 << ".  ";
+        cout << setw(6) << tur[i].count;
+        cout << setw(11) << tur[i].place;
+        cout << setw(5) << tur[i].cost;
+        cout << endl;
     }
+    write.close();
 }
 
 int main()
